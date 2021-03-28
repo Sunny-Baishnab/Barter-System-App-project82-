@@ -31,7 +31,7 @@ export default class UserDetailsScreen extends Component{
                 })
             })
         })
-        db.collection('exchange_requests').where('request_id','==',this.state.requestId).get()
+        db.collection('exchange_requests').where('exchange_id','==',this.state.exchangeId).get()
         .then(snapShot=>{
             snapShot.forEach(doc=>{
                 this.setState({
